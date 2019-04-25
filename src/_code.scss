@@ -1,0 +1,39 @@
+code {
+  font: {
+    family: var(--code-font, monospace);
+    weight: bold;
+  }
+  font-family: var(--code-font, monospace);
+  font-weight: bold;
+  background-color: var(--code-background);
+  color: var(--code-color);
+
+  border-radius: 5px;
+  padding: 0 0.25em;
+  line-height: 1.2em;
+}
+
+pre > code {
+  border-left: .5rem solid var(--code-block-border);
+  box-shadow: 0 2px 5px 0 var(--code-block-shadow);
+  overflow-x: auto;
+  display: block;
+  padding: 0.5em;
+  margin: 0 auto;
+  background-color: var(--code-block-background);
+  color: var(--code-block-text);
+  &::selection {
+    background-color: var(--code-block-selection-background);
+    color: var(--code-block-selection-foreground);
+  }
+
+  &.language-cmake {
+    function { color: var(--code-block-blue); }
+    builtin { color: var(--code-block-red); }
+    literal { color: var(--code-block-cyan); }
+    string { color: var(--code-block-green); }
+    module { color: var(--code-block-yellow); }
+    number { color: var(--code-block-orange); }
+    var { color: var(--code-block-purple); }
+  }
+}

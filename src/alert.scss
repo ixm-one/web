@@ -1,0 +1,43 @@
+$alerts: danger, warning, info, tip, note;
+
+main > aside {
+  display: grid;
+  border-radius: 3px;
+  border: 2px solid var(--alert-border);
+  margin: {
+    bottom: .5rem;
+    top: .5rem;
+  }
+  header {
+    background-color: var(--alert-header-background);
+    color: var(--alert-header-color);
+    &::before {
+      font-family: var(--icon-font);
+      font-weight: 900;
+      font-size: 1.1em;
+      content: var(--alert-icon);
+      margin-right: .5em;
+    }
+  }
+  p {
+    background-color: var(--alert-text-background);
+    color: var(--alert-text-color);
+    margin: 0;
+    padding: .5em;
+  }
+}
+
+aside {
+  @each $alert in $alerts {
+    &.#{$alert} {
+      --alert-header-background: var(--#{$alert}-header-background);
+      --alert-header-color: var(--#{$alert}-header-color);
+
+      --alert-text-background: var(--#{$alert}-text-background);
+      --alert-text-color: var(--#{$alert}-text-color, var(--gray-900));
+
+      --alert-border: var(--#{$alert}-border);
+      --alert-icon: var(--#{$alert}-icon);
+    }
+  }
+}

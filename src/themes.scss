@@ -1,0 +1,68 @@
+@import 'palette';
+
+:root {
+  --icon-font: 'Font Awesome 5 Free';
+  --code-font: 'Fira Code';
+  --text-font: 'Inter';
+
+  --selection-background: var(--selection-light);
+
+  --text-backgrond: var(--gray-100);
+  --text-color: var(--gray-900);
+
+  --link-color: var(--blue-400);
+  --link-hover: var(--blue-500);
+
+  --code-background: var(--red-000);
+  --code-color: var(--red-500);
+
+  --code-block-border: #2d6da3;
+
+  --danger-header-background: var(--red-500);
+  --warning-header-background: var(--yellow-700);
+
+  --danger-header-color: var(--red-100);
+  --warning-header-color: var(--yellow-000);
+
+  --danger-text-background: var(--red-100);
+  --warning-text-background: var(--yellow-000);
+
+  --danger-border: var(--red-500);
+  --warning-border: var(--yellow-500);
+
+  --danger-icon: '\f1e2';
+  --warning-icon: '\f071';
+  --info-icon: '\f05a';
+  --note-icon: '\f06a';
+  --tip-icon: '\f0eb';
+
+  --plus-icon: '\f0fe';
+  --minus-icon: '\f146';
+}
+
+[data-theme="dark"] {
+  --selection-background: var(--selection-dark);
+
+  --text-background: var(--gray-900);
+  --text-color: var(--gray-000);
+
+  --link-color: var(--blue-400);
+  --link-hover: var(--blue-300);
+
+  --code-background: var(--blue-900);
+  --code-color: var(--blue-300);
+
+  --code-block-border: #a626a4;
+
+  --danger-header-background: var(--red-900);
+  --danger-header-color: var(--red-100);
+}
+
+::selection {
+  background-color: var(--selection-background);
+  color: var(--text-color);
+}
+
+body {
+  transition: background-color 1s linear;
+}

@@ -1,0 +1,13 @@
+summary {
+  list-style-type: none;
+  &::before {
+    content: var(--plus-icon);
+    font-family: var(--icon-font);
+    padding-right: .25em;
+  }
+  &:hover { cursor: pointer; }
+}
+
+details[open] summary::before {
+  content: var(--minus-icon);
+}

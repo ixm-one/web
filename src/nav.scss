@@ -1,0 +1,18 @@
+main nav {
+  display: flex;
+  margin: {
+    bottom: 1em;
+    top: 1em;
+  }
+  justify-content: space-between;
+  align-items: center;
+  a, span {
+    padding: 7px 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    border: 1px solid var(--nav-border);
+    border-radius: 5px;
+    &:hover { background-color: var(--nav-hover); }
+  }
+  span { color: var(--nav-disabled); }
+}

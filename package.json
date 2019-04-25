@@ -1,0 +1,22 @@
+{
+  "name": "@ixm/web",
+  "version": "0.1.0",
+  "description": "Common CSS framework for IXM related websites",
+  "repository": "https://github.com/ixm-one/ixm.css",
+  "author": "Isabella Muerte",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp build",
+    "clean": "gulp clean"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "del": "^4.1.0",
+    "gulp": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
+  }
+}
